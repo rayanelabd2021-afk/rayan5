@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rayan | مبرمج ومطور ويب</title>
+</head>
+<body>
+
+    <!-- خلفية الـ 3D الهادئة -->
+    <canvas id="bg-3d"></canvas>
+
+    <!-- شريط تحكم بسيط وهادئ -->
+    <div class="control-dock">
+        <button id="sound-toggle" class="dock-btn" onclick="toggleSound()" title="تشغيل/كتم الصوت">🔇</button>
+        <div class="divider"></div>
+        <button class="theme-btn" style="background:#7dd3fc" onclick="changeTheme('#7dd3fc', '#94a3b8', 0x7dd3fc, 0x94a3b8)" title="أزرق هادئ"></button>
+        <button class="theme-btn" style="background:#6ee7b7" onclick="changeTheme('#6ee7b7', '#94a3b8', 0x6ee7b7, 0x94a3b8)" title="أخضر نعناعي"></button>
+        <button class="theme-btn" style="background:#c4b5fd" onclick="changeTheme('#c4b5fd', '#94a3b8', 0xc4b5fd, 0x94a3b8)" title="لافندر هادئ"></button>
+        <button class="theme-btn" style="background:#fcd34d" onclick="changeTheme('#fcd34d', '#94a3b8', 0xfcd34d, 0x94a3b8)" title="رملي دافئ"></button>
+    </div>
+
+    <!-- الهيدر -->
+    <header>
+        <h2>&lt;Rayan /&gt;</h2>
+        <nav>
+            <a href="#about">من أنا</a>
+            <a href="#skills">مهاراتي</a>
+            <a href="#projects">مشاريعي</a>
+            <a href="#game-lab">تحدي السرعة</a>
+            <a href="#terminal-sec">الترمينال</a>
+            <a href="#contact">تواصل</a>
+        </nav>
+    </header>
+
+    <!-- القسم الرئيسي -->
+    <section id="hero">
+        <div class="hero-content">
+            <span class="badge">أهلاً بك في مساحتي الرقمية</span>
+            <h1>أنا <span class="accent-name">ريان</span></h1>
+            <span class="typing-text" id="typing"></span>
+            <p>مطور مواقع وتجارب ويب ثلاثية الأبعاد، أركز على بناء واجهات نظيفة، سريعة، ومريحة للمستخدم.</p>
+            <div class="hero-btns">
+                <a href="#projects" class="btn">تصفح أعمالي</a>
+                <a href="#contact" class="btn btn-outline">تواصل معي</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- بطاقة التعريف البسيطة -->
+    <section class="id-card-sec">
+        <div class="glass-card cyber-id-card">
+            <div class="id-header">
+                <span class="id-tag">DEVELOPER PROFILE</span>
+                <span class="id-status">متاح للعمل ●</span>
+            </div>
+            <div class="id-body">
+                <div class="id-avatar">💻</div>
+                <div class="id-info">
+                    <h3>ريان (Rayan)</h3>
+                    <p>مطور واجهات ومواقع تفاعلية 3D</p>
+                    <p>مؤسس مشروع: ELABD STORE</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- من أنا -->
+    <section id="about">
+        <h2 class="section-title">من أنا؟</h2>
+        <div class="glass-card about-flex">
+            <div class="about-text">
+                <h3>شغوف ببساطة الكود وجمال التصميم</h3>
+                <p>أنا <strong>ريان</strong>، مبرمج ومطور ويب أؤمن أن التصميم الجيد هو التصميم المريح والواضح. أجمع بين أحدث تقنيات الويب والرسومات ثلاثية الأبعاد لبناء مواقع ومتاجر إلكترونية مثل <strong>ELABD STORE</strong>.</p>
+                <div class="timeline">
+                    <div class="time-item"><span>البداية:</span> تعلم أساسيات البرمجة وحل المشكلات.</div>
+                    <div class="time-item"><span>التطور:</span> بناء وتصميم مواقع متكاملة ومتجاوبة.</div>
+                    <div class="time-item"><span>الآن:</span> تطوير تجارب ويب تفاعلية حديثة.</div>
+                </div>
+            </div>
+            <div class="avatar-box">
+                <div class="calm-circle">
+                    <span>&lt;R/&gt;</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- المهارات -->
+    <section id="skills">
+        <h2 class="section-title">مهاراتي التقنية</h2>
+        <div class="grid">
+            <div class="glass-card">
+                <div class="icon">📐</div>
+                <h3>HTML5 & CSS3</h3>
+                <p>بناء هياكل نظيفة وتصميم واجهات هادئة ومتناسقة مع كل الشاشات.</p>
+                <div class="skill-bar"><div class="skill-fill" style="width: 95%;"></div></div>
+            </div>
+            <div class="glass-card">
+                <div class="icon">⚙️</div>
+                <h3>JavaScript</h3>
+                <p>إضافة التفاعل السلس، التطبيقات المصغرة، والمنطق البرمجي.</p>
+                <div class="skill-bar"><div class="skill-fill" style="width: 88%;"></div></div>
+            </div>
+            <div class="glass-card">
+                <div class="icon">🧊</div>
+                <h3>3D Web (Three.js)</h3>
+                <p>دمج العناصر ثلاثية الأبعاد بهدوء ونعومة داخل صفحات الويب.</p>
+                <div class="skill-bar"><div class="skill-fill" style="width: 82%;"></div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- المشاريع -->
+    <section id="projects">
+        <h2 class="section-title">مشاريعي</h2>
+        <div class="grid">
+            <div class="glass-card">
+                <span class="tag">Portfolio 3D</span>
+                <h3>موقعي الشخصي</h3>
+                <p>موقع تعريفي بتصميم هادئ ومريح للعين مع خلفية ثلاثية الأبعاد ناعمة.</p>
+            </div>
+            <div class="glass-card">
+                <span class="tag">Digital Brand</span>
+                <h3>ELABD STORE</h3>
+                <p>متجر ومنصة لتقديم الخدمات الرقمية وتنسيق الهويات البصرية.</p>
+            </div>
+            <div class="glass-card">
+                <span class="tag">Web App</span>
+                <h3>أدوات تفاعلية</h3>
+                <p>مجموعة من الألعاب والأدوات البرمجية الخفيفة التي تعمل على المتصفح.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- مختبر الألعاب المصغر -->
+    <section id="game-lab">
+        <h2 class="section-title">اختبر سرعة تركيزك</h2>
+        <div class="glass-card game-container">
+            <p>اضغط على المربع بالأسفل، وانتظر حتى يتحول للون <strong>الأخضر الهادئ</strong> ثم اضغط فوراً.</p>
+            <div id="reaction-box" class="reaction-box" onclick="handleReactionClick()">
+                اضغط للبدء
+            </div>
+            <div class="game-stats">
+                <span>أفضل نتيجة: <strong id="best-score">--</strong> مللي ثانية</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- شاشة الأوامر -->
+    <section id="terminal-sec">
+        <h2 class="section-title">الترمينال البرمجي</h2>
+        <div class="terminal-window">
+            <div class="terminal-header">
+                <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                <span class="term-title">rayan@workspace:~</span>
+            </div>
+            <div class="terminal-body" id="terminal-body">
+                <p class="term-line">أهلاً بك. اكتب <span class="cmd-highlight">help</span> لعرض الأوامر المتاحة.</p>
+            </div>
+            <div class="terminal-input-line">
+                <span>$</span>
+                <input type="text" id="terminal-input" placeholder="اكتب أمراً (مثل: help أو rayan أو projects)..." autocomplete="off">
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم التواصل -->
+    <section id="contact">
+        <h2 class="section-title">تواصل معي</h2>
+        <div class="glass-card contact-box">
+            <p>يسعدني تواصلك معي لأي استفسار أو تعاون برمجي.</p>
+            <div class="social-quick">
+                <button class="btn btn-outline" onclick="copySiteLink()">نسخ رابط الموقع</button>
+            </div>
+            <form onsubmit="sendMessage(event)" class="contact-form">
+                <input type="text" placeholder="الاسم" required>
+                <input type="text" placeholder="البريد الإلكتروني أو رقم الواتساب" required>
+                <textarea rows="3" placeholder="رسالتك..." required></textarea>
+                <button type="submit" class="btn">إرسال الرسالة</button>
+            </form>
+            <p id="form-status" style="margin-top: 15px; color: #6ee7b7; font-size: 15px;"></p>
+        </div>
+    </section>
+
+    <footer>
+        <p>صُمم وبُرمج بهدوء وشغف بواسطة <strong>ريان</strong> © 2026</p>
+    </footer>
+
+
+    <!-- ================= كود الـ CSS (التصميم الهادئ والمريح) ================= -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Fira+Code:wght@400;500&display=swap');
+
+        :root {
+            --primary: #7dd3fc;
+            --secondary: #94a3b8;
+            --bg-dark: #0f172a;
+            --card-bg: rgba(30, 41, 59, 0.55);
+            --border-subtle: rgba(255, 255, 255, 0.08);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Cairo', sans-serif; scroll-behavior: smooth; }
+        body { background-color: var(--bg-dark); color: #e2e8f0; line-height: 1.8; overflow-x: hidden; }
+
+        /* خلفية الـ 3D الهادئة */
+        #bg-3d { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -1; pointer-events: none; opacity: 0.65; }
+
+        /* شريط التحكم البسيط */
+        .control-dock {
+            position: fixed; left: 20px; bottom: 20px;
+            background: rgba(15, 23, 42, 0.8); backdrop-filter: blur(12px);
+            padding: 8px 14px; border-radius: 50px;
+            border: 1px solid var(--border-subtle);
+            display: flex; align-items: center; gap: 10px; z-index: 500;
+        }
+        .dock-btn { background: none; border: none; font-size: 16px; cursor: pointer; color: #cbd5e1; }
+        .divider { width: 1px; height: 16px; background: var(--border-subtle); }
+        .theme-btn { width: 18px; height: 18px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.4); cursor: pointer; transition: 0.2s; }
+        .theme-btn:hover { transform: scale(1.2); }
+
+        /* الهيدر */
+        header {
+            background: rgba(15, 23, 42, 0.75); backdrop-filter: blur(16px);
+            padding: 18px 8%; display: flex; justify-content: space-between; align-items: center;
+            position: sticky; top: 0; border-bottom: 1px solid var(--border-subtle); z-index: 100;
+        }
+        header h2 { color: var(--primary); font-weight: 700; font-size: 22px; direction: ltr; letter-spacing: 1px; }
+        nav a { color: #cbd5e1; text-decoration: none; margin-right: 22px; font-weight: 600; font-size: 15px; transition: 0.3s; }
+        nav a:hover { color: var(--primary); }
+
+        section { padding: 80px 8%; max-width: 1100px; margin: auto; }
+        h2.section-title {
+            font-size: 28px; color: #f8fafc; margin-bottom: 30px;
+            border-right: 3px solid var(--primary); padding-right: 15px; font-weight: 700;
+        }
+
+        /* Hero */
+        #hero { min-height: 78vh; display: flex; align-items: center; justify-content: center; text-align: center; }
+        .badge {
+            display: inline-block; padding: 6px 18px; background: rgba(255, 255, 255, 0.04);
+            border: 1px solid var(--border-subtle); border-radius: 50px; color: var(--secondary);
+            font-size: 14px; margin-bottom: 20px;
+        }
+        #hero h1 { font-size: 46px; font-weight: 700; margin-bottom: 10px; color: #f8fafc; }
+        .accent-name { color: var(--primary); }
+        .typing-text { display: block; font-size: 22px; color: var(--secondary); min-height: 40px; margin-bottom: 15px; }
+        #hero p { font-size: 18px; color: #94a3b8; max-width: 600px; margin: 0 auto 35px; }
+        .hero-btns { display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; }
+        .btn {
+            display: inline-block; background: var(--primary);
+            color: #0f172a; padding: 12px 28px; border-radius: 8px; text-decoration: none;
+            font-weight: 700; font-size: 15px; border: none; cursor: pointer; transition: 0.3s;
+        }
+        .btn:hover { opacity: 0.9; transform: translateY(-2px); }
+        .btn-outline { background: transparent; color: #e2e8f0; border: 1px solid rgba(255,255,255,0.2); }
+        .btn-outline:hover { border-color: var(--primary); color: var(--primary); }
+
+        /* بطاقة الهوية */
+        .id-card-sec { padding-top: 0; padding-bottom: 30px; }
+        .cyber-id-card { max-width: 440px; margin: 0 auto; }
+        .id-header { display: flex; justify-content: space-between; font-size: 12px; font-family: 'Fira Code', monospace; color: #94a3b8; margin-bottom: 15px; }
+        .id-status { color: #6ee7b7; }
+        .id-body { display: flex; align-items: center; gap: 18px; }
+        .id-avatar { width: 60px; height: 60px; background: rgba(255, 255, 255, 0.05); border-radius: 14px; display: flex; justify-content: center; align-items: center; font-size: 26px; border: 1px solid var(--border-subtle); }
+        .id-info h3 { color: #f8fafc; font-size: 19px; margin-bottom: 3px; }
+        .id-info p { font-size: 14px; color: #94a3b8; }
+
+        /* الكروت الهادئة */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 24px; }
+        .glass-card {
+            background: var(--card-bg); backdrop-filter: blur(16px);
+            padding: 28px; border-radius: 16px; border: 1px solid var(--border-subtle);
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+        .glass-card:hover { transform: translateY(-4px); border-color: rgba(125, 211, 252, 0.3); }
+        .glass-card .icon { font-size: 28px; margin-bottom: 12px; }
+        .glass-card h3 { color: #f8fafc; font-size: 20px; margin-bottom: 8px; }
+        .glass-card p { color: #94a3b8; font-size: 15px; }
+
+        /* من أنا */
+        .about-flex { display: flex; align-items: center; justify-content: space-between; gap: 30px; flex-wrap: wrap; }
+        .about-text { flex: 1; min-width: 280px; }
+        .timeline { margin-top: 18px; border-right: 2px solid rgba(255,255,255,0.1); padding-right: 15px; }
+        .time-item { margin-bottom: 8px; font-size: 14px; color: #94a3b8; }
+        .time-item span { color: var(--primary); font-weight: 600; }
+        .calm-circle {
+            width: 110px; height: 110px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.15);
+            background: rgba(255,255,255,0.03);
+            display: flex; justify-content: center; align-items: center;
+            font-size: 28px; font-weight: 700; color: var(--primary);
+        }
+
+        /* أشرطة المهارات */
+        .skill-bar { width: 100%; height: 6px; background: rgba(255,255,255,0.07); border-radius: 10px; margin-top: 18px; overflow: hidden; }
+        .skill-fill { height: 100%; background: var(--primary); border-radius: 10px; opacity: 0.85; }
+        .tag { display: inline-block; font-size: 12px; padding: 3px 10px; border-radius: 6px; background: rgba(255,255,255,0.05); color: var(--primary); margin-bottom: 12px; }
+
+        /* تحدي السرعة */
+        .game-container { text-align: center; }
+        .reaction-box {
+            margin: 20px auto; max-width: 460px; height: 140px;
+            background: rgba(15, 23, 42, 0.7); border: 1px solid var(--border-subtle); border-radius: 14px;
+            display: flex; justify-content: center; align-items: center;
+            font-size: 20px; font-weight: 700; cursor: pointer; user-select: none;
+            transition: background 0.2s;
+        }
+        .game-stats { font-size: 16px; color: #94a3b8; }
+        .game-stats strong { color: var(--primary); }
+
+        /* الترمينال الهادئ */
+        .terminal-window { background: rgba(15, 23, 42, 0.85); border: 1px solid var(--border-subtle); border-radius: 14px; overflow: hidden; direction: ltr; text-align: left; }
+        .terminal-header { background: rgba(30, 41, 59, 0.8); padding: 10px 15px; display: flex; align-items: center; gap: 7px; }
+        .dot { width: 10px; height: 10px; border-radius: 50%; background: rgba(255,255,255,0.2); }
+        .term-title { margin-left: 10px; font-family: 'Fira Code', monospace; font-size: 12px; color: #94a3b8; }
+        .terminal-body { padding: 20px; height: 190px; overflow-y: auto; font-family: 'Fira Code', monospace; font-size: 14px; color: #cbd5e1; direction: rtl; text-align: right; }
+        .term-line { margin-bottom: 8px; }
+        .cmd-highlight { color: var(--primary); }
+        .terminal-input-line { display: flex; align-items: center; padding: 12px 20px; background: rgba(15, 23, 42, 0.95); border-top: 1px solid var(--border-subtle); }
+        .terminal-input-line span { color: var(--primary); margin-right: 10px; font-family: 'Fira Code', monospace; }
+        .terminal-input-line input { background: transparent; border: none; color: #f8fafc; width: 100%; font-size: 15px; outline: none; }
+
+        /* التواصل */
+        .social-quick { display: flex; gap: 12px; margin-top: 15px; flex-wrap: wrap; }
+        .contact-form { display: flex; flex-direction: column; gap: 14px; margin-top: 20px; }
+        .contact-form input, .contact-form textarea {
+            width: 100%; padding: 13px; border-radius: 10px;
+            background: rgba(15, 23, 42, 0.6); border: 1px solid var(--border-subtle);
+            color: #f8fafc; font-size: 15px; outline: none; transition: 0.3s;
+        }
+        .contact-form input:focus, .contact-form textarea:focus { border-color: var(--primary); }
+
+        footer { text-align: center; padding: 35px; color: #64748b; border-top: 1px solid var(--border-subtle); margin-top: 40px; font-size: 14px; }
+
+        @media (max-width: 768px) {
+            #hero h1 { font-size: 34px; }
+            nav { display: none; }
+        }
+    </style>
+
+
+    <!-- ================= مكتبة Three.js وكود الـ 3D الهادئ ================= -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script>
+        // --- 1. صوت هادئ اختياري (مكتوم افتراضياً للهدوء) ---
+        let soundEnabled = false;
+        const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+
+        function playBeep(freq = 500, duration = 0.04) {
+            if (!soundEnabled) return;
+            if (audioCtx.state === 'suspended') audioCtx.resume();
+            const osc = audioCtx.createOscillator();
+            const gain = audioCtx.createGain();
+            osc.type = 'sine';
+            osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
+            gain.gain.setValueAtTime(0.02, audioCtx.currentTime);
+            gain.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + duration);
+            osc.connect(gain);
+            gain.connect(audioCtx.destination);
+            osc.start();
+            osc.stop(audioCtx.currentTime + duration);
+        }
+
+        function toggleSound() {
+            soundEnabled = !soundEnabled;
+            document.getElementById('sound-toggle').textContent = soundEnabled ? '🔊' : '🔇';
+            if (soundEnabled) playBeep(600, 0.08);
+        }
+
+        // --- 2. مشهد الـ 3D الهادئ والناعم ---
+        const canvas = document.getElementById('bg-3d');
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        const renderer = new THREE.WebGLRenderer({ canvas: canvas, alpha: true, antialias: true });
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        renderer.setPixelRatio(window.devicePixelRatio);
+
+        // مجسم هندسي ناعم بشفافية خفيفة جداً
+        const geometry = new THREE.IcosahedronGeometry(11, 2);
+        const material = new THREE.MeshBasicMaterial({ color: 0x7dd3fc, wireframe: true, transparent: true, opacity: 0.12 });
+        const calmSphere = new THREE.Mesh(geometry, material);
+        scene.add(calmSphere);
+
+        // نجوم خفيفة وبطيئة
+        const particlesGeometry = new THREE.BufferGeometry();
+        const particlesCount = 700;
+        const posArray = new Float32Array(particlesCount * 3);
+        for(let i = 0; i < particlesCount * 3; i++) {
+            posArray[i] = (Math.random() - 0.5) * 90;
+        }
+        particlesGeometry.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
+        const particlesMaterial = new THREE.PointsMaterial({ size: 0.12, color: 0x7dd3fc, transparent: true, opacity: 0.5 });
+        const particlesMesh = new THREE.Points(particlesGeometry, particlesMaterial);
+        scene.add(particlesMesh);
+
+        camera.position.z = 28;
+
+        function changeTheme(primaryHex, secondaryHex, primary3D, secondary3D) {
+            playBeep(650, 0.06);
+            document.documentElement.style.setProperty('--primary', primaryHex);
+            document.documentElement.style.setProperty('--secondary', secondaryHex);
+            material.color.setHex(primary3D);
+            particlesMaterial.color.setHex(primary3D);
+        }
+
+        let mouseX = 0, mouseY = 0;
+        document.addEventListener('mousemove', (e) => {
+            mouseX = (e.clientX / window.innerWidth) - 0.5;
+            mouseY = (e.clientY / window.innerHeight) - 0.5;
+        });
+
+        function animate3D() {
+            requestAnimationFrame(animate3D);
+            // دوران بطيء وهادئ جداً
+            calmSphere.rotation.x += 0.001;
+            calmSphere.rotation.y += 0.0015;
+            particlesMesh.rotation.y += 0.0004;
+
+            camera.position.x += (mouseX * 5 - camera.position.x) * 0.03;
+            camera.position.y += (-mouseY * 5 - camera.position.y) * 0.03;
+            camera.lookAt(scene.position);
+            renderer.render(scene, camera);
+        }
+        animate3D();
+
+        window.addEventListener('resize', () => {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        });
+
+        // --- 3. الكتابة التلقائية ---
+        const words = ["مبرمج ومطور ويب", "مصمم واجهات هادئة وعصرية", "مؤسس ELABD STORE"];
+        let wordIndex = 0, charIndex = 0, isDeleting = false;
+        const typingElement = document.getElementById("typing");
+
+        function typeEffect() {
+            const currentWord = words[wordIndex];
+            typingElement.textContent = isDeleting ? currentWord.substring(0, charIndex - 1) : currentWord.substring(0, charIndex + 1);
+            charIndex += isDeleting ? -1 : 1;
+            if (!isDeleting && charIndex === currentWord.length) {
+                isDeleting = true; setTimeout(typeEffect, 1800);
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false; wordIndex = (wordIndex + 1) % words.length; setTimeout(typeEffect, 400);
+            } else {
+                setTimeout(typeEffect, isDeleting ? 50 : 100);
+            }
+        }
+        typeEffect();
+
+        // --- 4. لعبة سرعة التركيز ---
+        let gameState = 'idle';
+        let startTime = 0, gameTimeout = null, bestScore = Infinity;
+        const reactionBox = document.getElementById('reaction-box');
+
+        function handleReactionClick() {
+            if (gameState === 'idle') {
+                gameState = 'waiting';
+                reactionBox.style.background = 'rgba(239, 68, 68, 0.35)';
+                reactionBox.textContent = 'انتظر اللون الأخضر...';
+                const randomDelay = Math.floor(Math.random() * 2500) + 1200;
+                gameTimeout = setTimeout(() => {
+                    gameState = 'ready';
+                    reactionBox.style.background = 'rgba(16, 185, 129, 0.45)';
+                    reactionBox.textContent = 'اضغط الآن!';
+                    startTime = Date.now();
+                    playBeep(700, 0.08);
+                }, randomDelay);
+            } else if (gameState === 'waiting') {
+                clearTimeout(gameTimeout);
+                gameState = 'idle';
+                reactionBox.style.background = 'rgba(15, 23, 42, 0.7)';
+                reactionBox.textContent = 'ضغطت مبكراً! اضغط للمحاولة مجدداً';
+            } else if (gameState === 'ready') {
+                const reactionTime = Date.now() - startTime;
+                gameState = 'idle';
+                reactionBox.style.background = 'rgba(15, 23, 42, 0.7)';
+                reactionBox.textContent = `النتيجة: ${reactionTime} مللي ثانية (اضغط للإعادة)`;
+                playBeep(800, 0.08);
+                if (reactionTime < bestScore) {
+                    bestScore = reactionTime;
+                    document.getElementById('best-score').textContent = bestScore;
+                }
+            }
+        }
+
+        // --- 5. الترمينال ---
+        const termInput = document.getElementById('terminal-input');
+        const termBody = document.getElementById('terminal-body');
+
+        termInput.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter') {
+                playBeep(550, 0.04);
+                const cmd = termInput.value.trim().toLowerCase();
+                if (!cmd) return;
+                let response = "";
+                if (cmd === 'help') {
+                    response = "الأوامر المتاحة: <span class='cmd-highlight'>rayan</span> | <span class='cmd-highlight'>projects</span> | <span class='cmd-highlight'>clear</span>";
+                } else if (cmd === 'rayan') {
+                    response = "ريان: مبرمج ومطور ويب، ومؤسس ELABD STORE.";
+                } else if (cmd === 'projects') {
+                    response = "1. الموقع الشخصي | 2. ELABD STORE | 3. تطبيقات ويب تفاعلية.";
+                } else if (cmd === 'clear') {
+                    termBody.innerHTML = ""; termInput.value = ""; return;
+                } else {
+                    response = `الأمر '${cmd}' غير معروف. اكتب <span class='cmd-highlight'>help</span> للمساعدة.`;
+                }
+                termBody.innerHTML += `<p class="term-line"><span style="color:var(--primary);">> ${cmd}</span><br>${response}</p>`;
+                termInput.value = "";
+                termBody.scrollTop = termBody.scrollHeight;
+            }
+        });
+
+        function copySiteLink() {
+            navigator.clipboard.writeText(window.location.href);
+            alert("تم نسخ رابط الموقع بنجاح.");
+        }
+
+        function sendMessage(e) {
+            e.preventDefault();
+            document.getElementById('form-status').textContent = "تم إرسال رسالتك بنجاح، شكراً لتواصلك مع ريان.";
+            e.target.reset();
+        }
+    </script>
+
+</body>
+</html>
